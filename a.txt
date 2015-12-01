@@ -1,0 +1,21 @@
+total 516
+drwxrwxr-x 2 rahul rahul   4096 Sep  2 10:41 ./
+drwxrwxr-x 5 rahul rahul   4096 Jul  8 17:34 ../
+-r--r--r-- 1 rahul rahul      0 Sep  2 10:41 a.txt
+-rw------- 1 rahul rahul 397312 Jul 17 10:37 core
+-rwxrwxr-x 1 rahul rahul   9136 Aug 19 17:14 fileread*
+-rw-rw-r-- 1 rahul rahul    731 Aug 21 09:29 fileread.c
+-rwxrwxr-x 1 rahul rahul   8678 Aug 28 12:22 in-place-reverse*
+-rw-rw-r-- 1 rahul rahul    553 Aug 28 12:22 in-place-reverse.c
+-rwxrwxr-x 1 rahul rahul   9084 Jul  6 17:46 mapfile*
+-rw-rw-r-- 2 rahul rahul   2004 Jul  6 15:28 mapfile.c
+-rwxrwxr-x 1 rahul rahul   8619 Jul  6 18:00 perror*
+-rw-rw-r-- 1 rahul rahul    160 Jul  6 18:00 perror.c
+-rw-rw-r-- 1 rahul rahul    210 Aug 24 11:59 pipe.c
+-rwxrwxr-x 1 rahul rahul   8825 Aug 12 15:39 stat2*
+-rw-rw-r-- 1 rahul rahul    398 Aug 12 15:39 stat2.c
+-rw-rw-r-- 1 rahul rahul   1749 Aug 12 11:01 stat.c
+-rw-rw-rw- 1 rahul rahul   8900 Aug 31 17:58 typedef
+-rw-rw-r-- 1 rahul rahul   1501 Jun 30 16:21 typedef.c
+-rwxrwxr-x 1 rahul rahul   9009 Jul 17 11:02 userinfo*
+-rw-rw-r-- 1 rahul rahul   1808 Jul 17 11:02 userinfo.c
