@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
@@ -34,6 +35,7 @@ int main(int argc, char const *argv[])
 	printf("After calling setuid system call\n");
 	printf("user id:%u, user effective id:%u\n",getuid(),geteuid());	
 	printf("group id:%u, group effective id:%u\n",getgid(),getegid());	
+
 
 	return 0;
 }
