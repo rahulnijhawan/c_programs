@@ -6,7 +6,7 @@
 
 #include <sys/socket.h>
 #include <sys/types.h>
-//#include <inet.h>
+#include <netdb.h>
 
 #define errmsg(msg) perror(msg); \
 				 exit(EXIT_FAILURE);					
@@ -27,6 +27,11 @@ int main(int argc, char const *argv[]) {
 	}
 
 	memset(&hints, 0 , sizeof hints);
+	hints.ai_family = AF_UNSPEC;
+	hints.ai_protocol = 0;
+	hints.ai_socktype = SOCK_STREAM;
+	hints.ai_flags = 0;
+	
 	getaddrinfo(argv[1], argv[2], &hints, &res);
 	return 0;
 }
