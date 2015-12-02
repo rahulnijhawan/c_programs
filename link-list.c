@@ -17,7 +17,26 @@ void saveToList();
 void searchFromList();
 void * createNode();
 
-struct 
+void encrypt();
+struct bank
+{
+	char name[30];
+	char branchCode[20];
 
+};
+
+struct data
+{
+	char user[20];
+	char password;
+	struct bank bk;
+	char salt[20];
+}
+
+int main(int argc, char const *argv[])
+{
+	/* code */
+	return 0;
+}
 
 
