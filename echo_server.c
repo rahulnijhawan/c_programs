@@ -1,11 +1,14 @@
 #include <stdio.h>
-#include <stdlib.h>
-
+#include <stdlib.h>// for exit
+#include <string.h>// for memset
 /*
 	socket, 
 */
-//#include <sys/types.h> not need to include in posix.1-2001 and also not required in Linux(given in listen man page.
+#include <sys/types.h> //not need to include in posix.1-2001 and also not required in Linux(given in listen man page.
 #include <sys/socket.h>
+
+#include <arpa/inet.h>
+
 
 #define BACKLOG 100
 
@@ -20,20 +23,27 @@ int main(int argc, char const *argv[])
 		err("Socket opening error");
 	}
 	struct sockaddr_in sa_in;
-	struct sockaddr sa;
+	memset(&sa_in, 0, sizeof(sa_in));
+	//struct sockaddr sa;
+	int portno = 3001;
+	sa_in.sin_family = AF_INET;
+	sa_in.sin_addr.s_addr = INADDR_ANY;
+	sa_in.sin_port = htons(portno);
 
-	bind(sfd, (const struct sockaddr*) &sa_in, sizeof(sa_in));
+	if (bind(sfd, (const struct sockaddr*) &sa_in, sizeof(sa_in)) < 0) {
+		err("Can't bind address");
+	}
 
 	if (listen(sfd, BACKLOG) == -1) {
 		err("Listen syscall error");
 	}
 
-	while(1) {
-		int lsfd = accept(sfd, &sa_in, sizeof(sa));
-		if (lsfd != -1) {
+	//while(1) {
+		int lsfd = accept(sfd, NULL, NULL);
+		//if (lsfd != -1) {
 
-		}
-	}
+	//	}
+	//}
 
 	return 0;
 }
