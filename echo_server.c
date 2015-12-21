@@ -38,12 +38,16 @@ int main(int argc, char const *argv[])
 		err("Listen syscall error");
 	}
 
-	//while(1) {
+	while(1) {
 		int lsfd = accept(sfd, NULL, NULL);
-		//if (lsfd != -1) {
-
-	//	}
-	//}
+		printf("get connection");
+		if (lsfd != -1) {
+			char str[50];
+			read(lsfd, str, sizeof(str));
+			printf("\n%s\n", str);
+			write(lsfd, "hi client", 50);
+		}
+	}
 
 	return 0;
 }
