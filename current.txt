@@ -1,5 +1,8 @@
 -echo-server.c
-	-- man socket -> man fcntl
+	-- man socket 
+		-> man fcntl 
+		-> man 5 protocols
+		-> ip packet structure
 uds.c -> unix domain socket
 
 link-list.c -> store encrypt bank details
