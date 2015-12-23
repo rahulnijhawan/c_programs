@@ -1,5 +1,5 @@
-echo-server.c
-
+-echo-server.c
+	-- man socket -> man fcntl
 uds.c -> unix domain socket
 
 link-list.c -> store encrypt bank details

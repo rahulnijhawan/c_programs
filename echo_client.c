@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
 	sa_in.sin_port = htons(3001);
 	sa_in.sin_addr.s_addr = inet_addr("127.0.0.1");
 	int conRes = connect(sfd, (const struct sockaddr *)&sa_in, sizeof(sa_in));
-	printf("%d\n", conRes);
+	//printf("%d\n", conRes);
 	if (conRes != 0) {
 		err("connection error");
 	}
