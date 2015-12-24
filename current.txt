@@ -3,6 +3,10 @@
 		-> man fcntl 
 		-> man 5 protocols
 		-> ip packet structure
+		-> man getprotoent
+			-> write program to read protocol entry
+			-> how communication domain and type in socket determine the protocol number if i gives protocol number 0(zero)
+
 uds.c -> unix domain socket
 
 link-list.c -> store encrypt bank details
