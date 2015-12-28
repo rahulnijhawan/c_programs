@@ -1,12 +1,13 @@
 -echo-server.c
 	-- man socket 
+		-> keep alive connection: http://www.tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/
 		-> man fcntl 
 		-> man 5 protocols
 		-> ip packet structure
 		-> man getprotoent
 			-> write program to read protocol entry
 			-> how communication domain and type in socket determine the protocol number if i gives protocol number 0(zero)
-
+		-> IRC(Internet Relay chat): https://en.wikipedia.org/wiki/Internet_Relay_Chat
 uds.c -> unix domain socket
 
 link-list.c -> store encrypt bank details
