@@ -8,6 +8,7 @@
 			-> write program to read protocol entry
 			-> how communication domain and type in socket determine the protocol number if i gives protocol number 0(zero)
 		-> IRC(Internet Relay chat): https://en.wikipedia.org/wiki/Internet_Relay_Chat
+		-> select vs poll vs event-driven(for example epoll)
 uds.c -> unix domain socket
 
 link-list.c -> store encrypt bank details
