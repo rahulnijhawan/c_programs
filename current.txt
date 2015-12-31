@@ -1,5 +1,9 @@
 -echo-server.c
 	-- man socket 
+		-> keep alive connection: http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/overview.html
+			-> tcp headers: PSH, RST
+			-> procfs or proc, sysctl
+			-> man sysctl.conf, /etc/sysctl.conf
 		-> man fcntl 
 		-> man 5 protocols
 		-> ip packet structure
