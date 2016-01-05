@@ -1,5 +1,9 @@
 -echo-server.c
 	-- man socket 
+		-> tcp conection establishment and close and sliding window
+			-> http://www.tcpipguide.com/free/t_TCPConnectionEstablishmentProcessTheThreeWayHandsh-4.htm
+			-> http://www.tcpipguide.com/free/t_TCPSlidingWindowAcknowledgmentSystemForDataTranspo-5.htm
+			-> http://www.tcpipguide.com/free/t_TCPSlidingWindowDataTransferandAcknowledgementMech.htm
 		-> keep alive connection: http://www.tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/
 		-> man fcntl 
 		-> man 5 protocols
@@ -9,6 +13,7 @@
 			-> how communication domain and type in socket determine the protocol number if i gives protocol number 0(zero)
 		-> IRC(Internet Relay chat): https://en.wikipedia.org/wiki/Internet_Relay_Chat
 		-> select vs poll vs event-driven(for example epoll)
+			-> select.c
 uds.c -> unix domain socket
 
 link-list.c -> store encrypt bank details
