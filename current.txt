@@ -1,6 +1,7 @@
--echo-server.c
-	-- man socket 
+-> echo-server.c
+	-> man socket 
 		-> tcp conection establishment and close and sliding window
+			-> linux/tcp.c
 			-> http://www.tcpipguide.com/free/t_TCPConnectionEstablishmentProcessTheThreeWayHandsh-4.htm
 			-> http://www.tcpipguide.com/free/t_TCPSlidingWindowAcknowledgmentSystemForDataTranspo-5.htm
 			-> http://www.tcpipguide.com/free/t_TCPSlidingWindowDataTransferandAcknowledgementMech.htm
@@ -14,6 +15,11 @@
 		-> IRC(Internet Relay chat): https://en.wikipedia.org/wiki/Internet_Relay_Chat
 		-> select vs poll vs event-driven(for example epoll)
 			-> select.c
-uds.c -> unix domain socket
 
-link-list.c -> store encrypt bank details
+-> __attribute__, <linux/types.h>
+	-> https://gcc.gnu.org/onlinedocs/gcc/Function-Attributes.html
+	-> https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/sparse.txt
+	-> attribute.c
+-> uds.c -> unix domain socket
+
+-> link-list.c -> store encrypt bank details
