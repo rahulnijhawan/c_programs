@@ -1,4 +1,4 @@
--> echo-server.c, echo_server_udp.c
+-> TCP server: echo-server.c
 	-> man socket 
 		-> tcp conection establishment and close and sliding window
 			-> linux/tcp.c
@@ -16,10 +16,16 @@
 		-> select vs poll vs event-driven(for example epoll)
 			-> select.c
 
+-> udp: echo_server_udp.c
+	-> 
+
 -> IPC books
 	-> http://www.netbsd.org/docs/bsd/lite2/psd.html
 	-> book: An Advance 4.4BSD IPC tutorial 
 	-> book: An Introductory 4.4BSD IPC tutorial
+
+-> Kernel Modules
+	-> kernel-modules.txt
 
 -> __attribute__, <linux/types.h>
 	-> https://gcc.gnu.org/onlinedocs/gcc/Function-Attributes.html
