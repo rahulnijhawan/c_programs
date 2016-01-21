@@ -1,4 +1,7 @@
+
 -> TCP server: echo-server.c
+	-> find how tcp server handle multiple connection? for example in webserver
+	-> is there limit of tcp connections?
 	-> man socket 
 		-> tcp conection establishment and close and sliding window
 			-> linux/tcp.c
@@ -19,8 +22,13 @@
 -> udp: echo_server_udp.c
 	-> 
 
+-> ping.c: Linux Socket Programming/part4/chap18 
+	-> ebook: Linux+Socket+Programming-Sean+Walton
+
+
 -> IPC books
 	-> http://www.netbsd.org/docs/bsd/lite2/psd.html
+	-> Linux+Socket+Programming-Sean+Walton.pdf
 	-> book: An Advance 4.4BSD IPC tutorial 
 	-> book: An Introductory 4.4BSD IPC tutorial
 
