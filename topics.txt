@@ -1,0 +1,8 @@
+Semaphore
+Mutual exclusion
+Spinlocking
+Segmentation fault
+SMP: symmetric multiprocessor programming
+Reentrant
+Thread safe
+

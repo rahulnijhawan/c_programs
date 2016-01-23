@@ -1,0 +1,13 @@
+-> ebook: http://www.tldp.org/LDP/lkmpg/2.4/html/x45.html
+	-> lsmod
+		-> /proc/modules
+	-> kmod
+	-> modprobe
+		->  /etc/modules.conf
+		-> /lib/modules/version/modules.dep: look for module dependencies
+			->  depmod -a: man depmod
+	-> insmod
+	-> depmod
+	-> ioctl
+		-> man ioctl
+		-> example: http://www.tldp.org/LDP/lkmpg/2.4/html/x856.html
