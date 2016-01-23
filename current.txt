@@ -1,9 +1,11 @@
--echo-server.c
-	-- man socket 
-		-> keep alive connection: http://tldp.org/HOWTO/TCP-Keepalive-HOWTO/overview.html
-			-> tcp headers: PSH, RST
-			-> procfs or proc, sysctl
-			-> man sysctl.conf, /etc/sysctl.conf
+-> echo_server.c
+	-> man socket 
+		-> tcp conection establishment and close and sliding window
+			-> linux/tcp.c
+			-> http://www.tcpipguide.com/free/t_TCPConnectionEstablishmentProcessTheThreeWayHandsh-4.htm
+			-> http://www.tcpipguide.com/free/t_TCPSlidingWindowAcknowledgmentSystemForDataTranspo-5.htm
+			-> http://www.tcpipguide.com/free/t_TCPSlidingWindowDataTransferandAcknowledgementMech.htm
+		-> keep alive connection: http://www.tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/
 		-> man fcntl 
 		-> man 5 protocols
 		-> ip packet structure
@@ -12,6 +14,12 @@
 			-> how communication domain and type in socket determine the protocol number if i gives protocol number 0(zero)
 		-> IRC(Internet Relay chat): https://en.wikipedia.org/wiki/Internet_Relay_Chat
 		-> select vs poll vs event-driven(for example epoll)
-uds.c -> unix domain socket
+			-> select.c
+-> echo_server_udp.c
+-> __attribute__, <linux/types.h>
+	-> https://gcc.gnu.org/onlinedocs/gcc/Function-Attributes.html
+	-> https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/sparse.txt
+	-> attribute.c
+-> uds.c -> unix domain socket
 
-link-list.c -> store encrypt bank details
+-> link-list.c -> store encrypt bank details
