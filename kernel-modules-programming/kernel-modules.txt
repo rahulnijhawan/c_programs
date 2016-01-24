@@ -1,0 +1,35 @@
+-> ebook: http://www.tldp.org/LDP/lkmpg/2.4/html/x45.html
+	-> lsmod
+		-> /proc/modules
+	-> kmod: call modprobe
+	-> modprobe: search and load module with all modules dependencies
+		->  /etc/modules.conf
+		-> /lib/modules/version/modules.dep: look for module dependencies
+			->  depmod -a: man depmod
+	-> insmod
+		-> printk msg goes to "/var/logs" in terminal emulator in GUI or see it in text console 
+	-> rmmod
+	-> depmod
+	-> ioctl
+		-> man ioctl
+		-> example: http://www.tldp.org/LDP/lkmpg/2.4/html/x856.html
+	-> vermagic.o: if version in magic number not match in modules in current kernel it will not run there. 
+		-> Used way around to change it version in header files with precompiled kernel boot files:
+			-> http://linux.die.net/lkmpg/x380.html
+			-> init/vermagic.o
+			->  /boot/config-`uname -r`: configuration file used to compile kernel
+			-> /usr/src/linux/Makefile, and make sure that the specified version information matches exactly the one used for your current kernel
+			-> version.h: /usr/src/linux-headers-3.13.0-24-generic/include/generated/uapi/linux/version.h
+
+	-> current: global item pointer to current process struct task_struct
+		-> current define in <asm/current.h>
+		-> struct task_struct defined in <linux/sched.h> file in "src/linux-`uname -r`/include/linux/"
+
+	-> The kernel, instead, has a very small stack; it can be as small as a single, 4096-byte page. Your 
+	   functions must share that stack with the entire kernel-space call chain. Thus, it is never a good idea to declare large auto-matic variables; if you need larger structures, you should allocate them dynamically
+	   at call time.
+
+	-> Documentation/kbuild: in kernel source directory in the kernel source are required read-ing for anybody 
+	   wanting to understand all that is really going on beneath the surface.
+
+	

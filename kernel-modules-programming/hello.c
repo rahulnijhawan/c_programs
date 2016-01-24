@@ -1,8 +1,12 @@
 #include <linux/init.h>
 #include <linux/module.h>
+// NOT CHECKED: without such a declaration, the kernel complains when the module is loaded
+MODULE_LICENSE("Dual BSD/GPL"); 
 
 static int hello_init(void)
-{   printk(KERN_ALERT "starting hello\n");
+{   
+	// PRIORITY STRING: KERN_ALERT
+	printk(KERN_ALERT "starting hello\n");
     return 0;
 }
 
