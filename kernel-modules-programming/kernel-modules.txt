@@ -29,7 +29,9 @@
 	   functions must share that stack with the entire kernel-space call chain. Thus, it is never a good idea to declare large auto-matic variables; if you need larger structures, you should allocate them dynamically
 	   at call time.
 
+-------------- CURRENT TOPIC -------------------
+	-> VMLINUX?
 	-> Documentation/kbuild: in kernel source directory in the kernel source are required read-ing for anybody 
 	   wanting to understand all that is really going on beneath the surface.
 
-	
+	-> Documentation/Changes: in the kernel documentation directory always lists the required tool versions
