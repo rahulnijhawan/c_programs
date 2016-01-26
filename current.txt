@@ -1,5 +1,7 @@
 -> TCP server: echo-server.c
-	-> find how tcp server handle multiple connection? for example in webserver
+	-> ebook/tcp-EFSM-SDL.pdf: give in detail about finite state machine diagram for connection and termination
+	   of connection.
+	-> find how tcp server handle multiple connection? for example in webserver.
 	-> is there limit of tcp connections?
 	-> man socket 
 		-> tcp conection establishment and close and sliding window
