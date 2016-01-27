@@ -10,6 +10,9 @@
 		-> printk msg goes to "/var/logs" in terminal emulator in GUI or see it in text console 
 	-> rmmod
 	-> depmod
+	-> mknod -- make device block and character file.
+	-> /proc/devices -- list of device major and minor numbers
+	-> /dev -- all device files
 	-> ioctl
 		-> man ioctl
 		-> example: http://www.tldp.org/LDP/lkmpg/2.4/html/x856.html
