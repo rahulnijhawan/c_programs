@@ -1,21 +1,35 @@
 -> ebook: http://www.tldp.org/LDP/lkmpg/2.4/html/x45.html
 	-> lsmod
 		-> /proc/modules
+		-> /sys/module: Information on currently loaded modules can also be found in the sysfs virtual filesystem
+
 	-> kmod: call modprobe
 	-> modprobe: search and load module with all modules dependencies
 		->  /etc/modules.conf
 		-> /lib/modules/version/modules.dep: look for module dependencies
 			->  depmod -a: man depmod
+		-> The modprobe utility is worth a quick mention. modprobe, like insmod, loads a module into the kernel. 
+		   It differs in that it will look at the module to be loaded to see whether it references any symbols that are not currently defined in the kernel. If any such references are found, modprobe looks for other modules in the current module search path that define the relevant symbols. When modprobe finds those modules (which are needed by the module being loaded), it loads them into the kernel as well. If you use insmod in this situation instead, the command fails with an “unresolved symbols” message left in the system logfile.
+
 	-> insmod
 		-> printk msg goes to "/var/logs" in terminal emulator in GUI or see it in text console 
+		-> The program loads the module code and data into the kernel, which, in turn, performs a function similar 
+		   to that of ld, in that it links any unresolved symbol in the module to the symbol table of the kernel.
+		   Unlike the linker, however, the kernel doesn’t modify the module’s disk file, but rather an in-memory 
+		   copy.???????????????
+		-> it can assign values to parameters in your module before linking it to the current kernel.
+		-> how the kernel supports insmod: it relies on a system call defined in kernel/module.c.
 	-> rmmod
 	-> depmod
+	-> modinfo
 	-> mknod -- make device block and character file.
 	-> /proc/devices -- list of device major and minor numbers
 	-> /dev -- all device files
 	-> ioctl
 		-> man ioctl
 		-> example: http://www.tldp.org/LDP/lkmpg/2.4/html/x856.html
+	-> modversion
+		-> http://www.skynet.ie/~mark/home/kernel/symbols.html
 	-> vermagic.o: if version in magic number not match in modules in current kernel it will not run there. 
 		-> Used way around to change it version in header files with precompiled kernel boot files:
 			-> http://linux.die.net/lkmpg/x380.html
@@ -23,14 +37,25 @@
 			->  /boot/config-`uname -r`: configuration file used to compile kernel
 			-> /usr/src/linux/Makefile, and make sure that the specified version information matches exactly the one used for your current kernel
 			-> version.h: /usr/src/linux-headers-3.13.0-24-generic/include/generated/uapi/linux/version.h
-
+				-> This header file, automatically included by <linux/module.h>, 
+				   defines the following macros.
+				   -> UTS_RELEASE: /usr/src/linux-headers-3.13.0-24-generic/include/generated/utsrelease.h
+				   -> LINUX_VERSION_CODE
+				   -> KERNEL_VERSION(major,minor,release)
+			-> One of the steps in the build process is to link your module against a file (called vermagic.o) from the current kernel tree; this object contains a fair amount of information about the kernel the 
+			module was built for, including the target kernel version, compiler version, and the settings of a 
+			number of important configuration variables.
+    
 	-> current: global item pointer to current process struct task_struct
 		-> current define in <asm/current.h>
 		-> struct task_struct defined in <linux/sched.h> file in "src/linux-`uname -r`/include/linux/"
-
+	-> vmalloc
+	-> sys_init_module: The function sys_init_module allocates kernel memory to hold a module (this memory is 
+	   allocated with vmalloc)
 	-> The kernel, instead, has a very small stack; it can be as small as a single, 4096-byte page. Your 
 	   functions must share that stack with the entire kernel-space call chain. Thus, it is never a good idea to declare large auto-matic variables; if you need larger structures, you should allocate them dynamically
 	   at call time.
+
 
 -------------- CURRENT TOPIC -------------------
 	-> VMLINUX?
@@ -38,3 +63,8 @@
 	   wanting to understand all that is really going on beneath the surface.
 
 	-> Documentation/Changes: in the kernel documentation directory always lists the required tool versions
+
+	-> 
+
+files:
+	-> kernel/module.c
