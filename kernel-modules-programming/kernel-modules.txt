@@ -61,6 +61,9 @@
 	-> parport: parallel port
 		-> https://www.kernel.org/doc/Documentation/parport.txt
 
+	-> GFP
+		-> get free pages
+		-> <linux/gfp.h>
 -------------- CURRENT TOPIC -------------------
 	-> VMLINUX?
 	-> Documentation/kbuild: in kernel source directory in the kernel source are required read-ing for anybody 
@@ -74,5 +77,8 @@ files:
 	-> kernel/module.c
 
 
+-> NUMA
+	-> https://en.wikipedia.org/wiki/Non-uniform_memory_access
+	
 -> kernel panic or in Microsoft (blue screen of death)
 	-> https://en.wikipedia.org/wiki/Kernel_panic
