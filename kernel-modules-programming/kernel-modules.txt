@@ -79,6 +79,15 @@ files:
 
 -> NUMA
 	-> https://en.wikipedia.org/wiki/Non-uniform_memory_access
-	
+	-> https://software.intel.com/en-us/articles/optimizing-applications-for-numa
+	-> ebooks/NUMA.pdf
+		-> cache coherence
+			-> MESIF:Modified, Exclusive, Shared , Ivalid, forword 
+			-> MESI: Modified, Exclusive, Shared , Ivalid
+				-> https://en.wikipedia.org/wiki/MESI_protocol
+-> NMI
+	-> https://en.wikipedia.org/wiki/Non-maskable_interrupt
+-> parallel computing
+	-> https://en.wikipedia.org/wiki/Parallel_computing
 -> kernel panic or in Microsoft (blue screen of death)
 	-> https://en.wikipedia.org/wiki/Kernel_panic
