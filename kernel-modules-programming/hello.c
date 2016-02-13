@@ -1,5 +1,6 @@
 #include <linux/init.h>
 #include <linux/module.h>
+
 // NOT CHECKED: without such a declaration, the kernel complains when the module is loaded
 MODULE_LICENSE("Dual BSD/GPL"); 
 
