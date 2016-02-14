@@ -30,6 +30,7 @@
 	-> ioctl
 		-> man ioctl
 		-> example: http://www.tldp.org/LDP/lkmpg/2.4/html/x856.html
+	-> lsof: ls of open files
 	-> modversion
 		-> http://www.skynet.ie/~mark/home/kernel/symbols.html
 	-> vermagic.o: if version in magic number not match in modules in current kernel it will not run there. 
@@ -64,6 +65,11 @@
 	-> GFP
 		-> get free pages
 		-> <linux/gfp.h>
+
+	-> wiat queue in linux
+		-> <linux/wait.h>
+			-> DECLARE_WAIT_QUEUE_HEAD(name)
+			-> wait_queue_head_t
 -------------- CURRENT TOPIC -------------------
 	-> VMLINUX?
 	-> Documentation/kbuild: in kernel source directory in the kernel source are required read-ing for anybody 
