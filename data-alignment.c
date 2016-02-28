@@ -12,6 +12,8 @@ int main(int argc, char const *argv[])
 {
 	//extern int ea[];
 	//int ia[];
+	long int padding= -(0x59d)&(7);
+	printf("%ld\n", padding );
 	struct dt
 	{
 		char c;
