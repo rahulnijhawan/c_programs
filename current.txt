@@ -1,3 +1,10 @@
+
+-> Data Structure Alignment
+	-> ebook/data-alignment.pdf
+	-> posix_memalign
+	-> data alignment and data padding
+	-> A memory access is said to be aligned when the datum being accessed is n bytes long and the datum address 	is n-byte aligned.
+
 -> TCP server: echo-server.c
 	-> ebook/tcp-EFSM-SDL.pdf: give in detail about finite state machine diagram for connection and termination
 	   of connection.
