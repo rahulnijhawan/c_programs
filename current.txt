@@ -1,13 +1,14 @@
 
--> Data Structure Alignment
-	-> ebook/data-alignment.pdf
-	-> posix_memalign
-	-> data alignment and data padding
-	-> A memory access is said to be aligned when the datum being accessed is n bytes long and the datum address 	is n-byte aligned.
-
 -> TCP server: echo-server.c
+	-> ebook/Linux+Socket+Programming-Sean+Walton.pdf
+		-> Parallel Virtual Machines (PMVs)
+			-> https://web.archive.org/web/20070321103208/http://www.parawiki.org/index.php?title=Parallel_Virtual_Machine&redirect=no
+		-> syncronization
+		-> Timing and resource management reduce the server's burden, increasing network performance?? HOW..
+
 	-> ebook/tcp-EFSM-SDL.pdf: give in detail about finite state machine diagram for connection and termination
 	   of connection.
+
 	-> find how tcp server handle multiple connection? for example in webserver.
 	-> is there limit of tcp connections?
 	-> man socket 
@@ -26,6 +27,9 @@
 		-> IRC(Internet Relay chat): https://en.wikipedia.org/wiki/Internet_Relay_Chat
 		-> select vs poll vs event-driven(for example epoll)
 			-> select.c
+		-> /etc/services: well known port numbers
+		-> inetd: the inetd network server daemon running,  not installed by default.
+			-> /etc/inetd.conf
 
 -> udp: echo_server_udp.c
 	-> 
@@ -33,6 +37,11 @@
 -> ping.c: Linux Socket Programming/part4/chap18 
 	-> ebook: Linux+Socket+Programming-Sean+Walton
 
+-> Data Structure Alignment
+	-> ebook/data-alignment.pdf
+	-> posix_memalign
+	-> data alignment and data padding
+	-> A memory access is said to be aligned when the datum being accessed is n bytes long and the datum address 	is n-byte aligned.
 
 -> IPC books
 	-> http://www.netbsd.org/docs/bsd/lite2/psd.html
