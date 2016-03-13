@@ -5,7 +5,7 @@
 			-> https://web.archive.org/web/20070321103208/http://www.parawiki.org/index.php?title=Parallel_Virtual_Machine&redirect=no
 		-> syncronization
 		-> Timing and resource management reduce the server's burden, increasing network performance?? HOW..
-
+		-> TCP Reno: congestion management
 	-> ebook/tcp-EFSM-SDL.pdf: give in detail about finite state machine diagram for connection and termination
 	   of connection.
 
