@@ -1,4 +1,4 @@
-
+wireshark???
 -> TCP server: echo-server.c
 	-> ebook/Linux+Socket+Programming-Sean+Walton.pdf
 		-> Parallel Virtual Machines (PMVs)
@@ -6,6 +6,8 @@
 		-> syncronization
 		-> Timing and resource management reduce the server's burden, increasing network performance?? HOW..
 		-> TCP Reno: congestion management
+		-> how connection are close/shutdown
+			-> http://stackoverflow.com/questions/4160347/close-vs-shutdown-socket
 	-> ebook/tcp-EFSM-SDL.pdf: give in detail about finite state machine diagram for connection and termination
 	   of connection.
 
@@ -70,3 +72,15 @@ Information:
 		stands for Address and Routing Parameter Area.
 	-> https://www.quora.com/I-study-hard-16-hours-a-day-but-still-I-cant-get-good-grades-What-should-I-do
 
+
+
+-- C language
+	-> static
+	-> volatile
+		-> http://www.barrgroup.com/Embedded-Systems/How-To/C-Volatile-Keyword
+
+-- Important Information
+	-> polling
+	-> spinlocking
+	-> busy-waiting
+	-> memory barrier or membar or memory fence or fence instruction
