@@ -1,3 +1,4 @@
+
 wireshark???
 https://www.youtube.com/watch?v=vU2HDf5ZhO4
 -> TCP server: echo-server.c
@@ -86,3 +87,4 @@ Information:
 	-> busy-waiting
 	-> memory barrier or membar or memory fence or fence instruction
 	-> ubuntu 16.04: http://www.zdnet.com/article/ubuntu-linux-16-04-is-here/
+
