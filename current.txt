@@ -1,3 +1,9 @@
+-> currently programs
+	-- array queue.
+	-- named pipe and anonymous.
+	-- data_structure
+
+
 wireshark????
 -> TCP server: echo-server.c
 	-> ebook/Linux+Socket+Programming-Sean+Walton.pdf
