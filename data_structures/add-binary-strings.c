@@ -3,6 +3,7 @@
 
 #define BINARY_STRING_LEN 4
 
+
 enum bool{false, true};
 
 int is_binary_digit(char c) {
@@ -96,8 +97,10 @@ int main(int argc, char const *argv[])
 	printf("is_binary_digit %d\n", is_binary_digit('0'));
 	printf("is_binary_digit %d\n", is_binary_digit('2'));
 	//printf("is_binary_string %d\n", is_binary_string(argv[1]));
+
 	char bin_str1[BINARY_STRING_LEN] = argv[1]; //"1111000000000000000\0";
 	char bin_str2[BINARY_STRING_LEN] = argv[2]; //"11111111\0";
+
 	//printf("%s\n", (char *) prepend_zeros(bin_str1));
 	printf("%s\n", add_sol1(bin_str1, bin_str2));
 	return 0;
