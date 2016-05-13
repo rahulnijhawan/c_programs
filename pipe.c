@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
 	1) pipe()
 	2) fork()
@@ -15,8 +14,8 @@
 	13) umask: shell cmd
 	
 */
-=======
-/*` 
+
+/*
 	
 	
 
@@ -84,14 +83,10 @@ void sig_handler(int signum)
 }
 
 //signal(SIGPIPE, sig_handler);
->>>>>>> aae8ae4a270c7b8b2e4a544fbbc013412437b6a1
 
 int main()
 {
 
-<<<<<<< HEAD
-	
-=======
 	int fd[2];
 		pid_t cpid;
 	char readbuf[20];
@@ -169,5 +164,4 @@ int main()
 char * readfile(char* filename)
 {
 
->>>>>>> aae8ae4a270c7b8b2e4a544fbbc013412437b6a1
 }
