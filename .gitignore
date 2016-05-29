@@ -1,1 +1,7 @@
 echo_server
+*.cmd
+*.o
+daytime-server
+daytime-client
+*.ko
+**/add-binary-strings
