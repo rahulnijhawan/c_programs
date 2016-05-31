@@ -1,15 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/types.h>
 #include <sys/stat.h>
+#include <fcntl.h>
 #include <unistd.h>
 
 #include <linux/stat.h>
 
-#define FIFO_FILE       "MYFIFO"
+#include "error.h"
+
+#define FIFO_FILE "MYFIFO"
 
 int main(void)
 {
         FILE *fp;
+        int fd;
         char readbuf[80];
 
         /* Create the FIFO if it does not exist */
@@ -18,10 +23,16 @@ int main(void)
 
         while(1)
         {
-                fp = fopen(FIFO_FILE, "r");
-                fgets(readbuf, 80, fp);
+                fd = open(FIFO_FILE, O_CREAT|O_RDONLY);
+                if(fd == -1) {
+                        err("open");
+                }
+                        
+                read(fd, readbuf, 80);
+                //fgets(readbuf, 80, fp);
                 printf("Received string: %s\n", readbuf);
-                fclose(fp);
+                close(fd);
+                
         }
 
         return(0);
