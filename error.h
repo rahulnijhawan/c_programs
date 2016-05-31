@@ -1,6 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-//#include <error.h>
+#ifndef _STDIO_H
+	#include <stdio.h>
+#endif
+#ifndef _STDLIB_H 
+	#include <stdlib.h>
+#endif
 
 void err(char *msg)
 {

@@ -12,14 +12,11 @@
 	11) mknod: shell cmd
 	12) umask()
 	13) umask: shell cmd
-	
-*/
 
-/*
-	
-	
 
-	parent is reader and child is writer
+	- parent is reader and child is writer, only used between related processes(parent,child or sibling).
+
+	- PIPE_BUF: atomic max size of data that pipe can write at once, greater than this can be interleaved	
 	child: CRD -child read file descriptior, CWD -child write file descriptor
 	child: PRD -parent read file descriptior, PWD -parent write file descriptor
 		CRD	CWD	PRD	PWD
@@ -71,17 +68,12 @@
 //#include <fcntl.h> need for dup3(...)
 
 
-void error_handler(char *msg)
-{
-	perror(msg);
-	exit(EXIT_FAILURE);
-}
+void error_handler(char *msg);
 
-void sig_handler(int signum)
-{
-	printf("%d\n", signum);
-}
+void sig_handler(int signum);
 
+
+char * readfile(char* filename);
 //signal(SIGPIPE, sig_handler);
 
 int main()
@@ -161,7 +153,15 @@ int main()
 }
 
 
-char * readfile(char* filename)
-{
 
+void error_handler(char *msg)
+{
+	perror(msg);
+	exit(EXIT_FAILURE);
 }
+
+void sig_handler(int signum)
+{
+	printf("%d\n", signum);
+}
+

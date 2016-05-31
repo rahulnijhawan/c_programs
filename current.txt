@@ -1,6 +1,13 @@
-
 wireshark???
 IPC: https://www.youtube.com/watch?v=vU2HDf5ZhO4
+
+-> currently programs
+	-- array queue.
+	-- named pipe(writer and reader) and anonymous.
+	-- data_structure
+
+-> Next
+	-> find how to write exception handling in c. or how others language wirte it.
 
 -> TCP server: echo-server.c
 	-> ebook/Linux+Socket+Programming-Sean+Walton.pdf
