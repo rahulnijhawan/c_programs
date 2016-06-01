@@ -12,9 +12,7 @@
 	11) mknod: shell cmd
 	12) umask()
 	13) umask: shell cmd
-	
-	
-	
+
 
 	- parent is reader and child is writer, only used between related processes(parent,child or sibling).
 
@@ -80,6 +78,7 @@ char * readfile(char* filename);
 
 int main()
 {
+
 	int fd[2];
 		pid_t cpid;
 	char readbuf[20];
@@ -165,3 +164,4 @@ void sig_handler(int signum)
 {
 	printf("%d\n", signum);
 }
+
