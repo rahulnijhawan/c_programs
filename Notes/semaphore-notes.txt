@@ -1,5 +1,6 @@
 -- Explore more on this topics.
 	-- priority inversion???
+		-- http://www.barrgroup.com/Embedded-Systems/How-To/RTOS-Priority-Inversion
 
 
 
