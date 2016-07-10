@@ -1,0 +1,7 @@
+-- Explore more on this topics.
+	-- priority inversion???
+
+
+
+-- mutual exculsive is locking mechanisms.
+-- Semaphore is signaling mechanisms.
