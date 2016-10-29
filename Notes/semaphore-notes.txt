@@ -1,7 +1,12 @@
+--exercise
+	-- write producer and consumer
+	
 -- Explore more on this topics.
+	-- parallel vs concurrent programming.???
+	-- reentrant vs thread safe??
 	-- priority inversion???
 		-- http://www.barrgroup.com/Embedded-Systems/How-To/RTOS-Priority-Inversion
-
+	-- dinning philospher problem.
 
 
 -- mutual exculsive is locking mechanisms.
