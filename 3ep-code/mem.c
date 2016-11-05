@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
 	int *intP = malloc(sizeof(int));
 	assert(intP != NULL);
 
-	printf("(%d) address pointed to by p: %p\n",getpid(), intP );
+	printf("(%d) address pointed to by p: %p\n",getpid(), 	intP );
 
 	*intP = 0;
 
