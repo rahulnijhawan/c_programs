@@ -7,7 +7,7 @@
 // data
 struct int_node {
 	int val;
-	struct int_node *parent;	
+	//struct int_node *parent;	
 	struct int_node *left;
 	struct int_node *right;
 };
@@ -20,9 +20,9 @@ pin_node tree;
 // functions
 pin_node createNode();
 pin_node getNFillNode(int);
-void setLeft(int *, int);
-void setRight(int *, int);
-int info(int *);
+void setLeft(pin_node, int);
+void setRight(pin_node, int);
+int info(pin_node);
 void buildBinaryTree(pin_node , int );
 // functions ends
 
@@ -67,7 +67,7 @@ void buildBinaryTree(pin_node root, int i)
 	p = q = root;
 	while (q) {
 		p = q;
-		v = p->val;
+		v = info(p);
 		if (v == i) {
 			printf("duplicate\n");
 			q = NULL;
@@ -83,14 +83,44 @@ void buildBinaryTree(pin_node root, int i)
 
 	if (p) {
 		int v = p->val;
-		pin_node fn = getNFillNode(i);
 		 if (v < i) {
-			p->left = fn;
-
+		 	setLeft(p, i);
 		} else {
-			p->right = fn;
+			setRight(p, i);
 		}
 	}
 	
+}
+
+void setLeft(pin_node n, int i)
+{
+	if (n == NULL) {
+		printf("invalid node.\n");
+	} else if (n->left != null) {
+		printf("left node exists.\n");
+	} else {
+		pin_node newNode = getNFillNode(i);
+		n->left = newNode;
+	}
+
+}
+
+void setRight(pin_node n, int i)
+{
+	if (n == NULL) {
+		printf("invalid node.\n");
+	} else if (n->right != null) {
+		printf("right node exists.\n");
+	} else {
+		pin_node newNode = getNFillNode(i);
+		n->right = newNode;
+	}
+}
+
+void info(pin_node pn)
+{
+	if (pn != NULL) {
+		return pn->val;
+	}	
 }
 
